@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= Chat
+  p Welcome to my chat
+  form(method="POST", action="/chat")
+    p
+      label(for="nombre") Username<br />
+      input(type="text",name="nombre" id="nombre")
+    p
+      label(for="nombre_dest") Username destino<br />
+      input(type="text",name="nombre_dest" id="nombre_dest")
+    p
+      label(for="mensajes") Mensajes<br />
+      textarea(name="mensajes" id="mensajes")
+    p
+      label(for="mensaje") Mensaje<br />
+      textarea(name="mensaje" id="mensaje")
+    p
+      input(id="chat_btn",type="button", value="Send")
